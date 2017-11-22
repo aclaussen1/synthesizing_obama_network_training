@@ -46,7 +46,7 @@ class Speech(TFBase):
     if (self.audioinput):
       self.args.input = self.args.input2
 
-    if len(self.args.input):
+    if false:
       print('test')
       self.test()
     else:
