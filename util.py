@@ -190,6 +190,7 @@ class TFBase(object):
     # only use save_dir from args
     save_dir = self.args.save_dir
 
+    '''
     with open("./data/training_./saveme.cpkl") as f:
       saved_args = cPickle.load(f)
 
@@ -197,8 +198,9 @@ class TFBase(object):
       pt = saved_args.usetrainingof
     else:
       pt = save_dir
+    '''
 
-    with open("./data/training_" + pt + ".cpkl", "rb") as f:
+    with open("./data/training_./saveme.cpkl") as f:
       raw = cPickle.load(f)
 
     model = self.model(saved_args, True)
