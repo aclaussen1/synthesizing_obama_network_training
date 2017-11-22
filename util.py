@@ -43,6 +43,7 @@ def add_boolean_argument(parser, name, default=False):
   group.add_argument('--no' + name, dest=name, action='store_false')
 
 def normalizeData(lst, savedir, name, varnames, normalize=True):
+  print(lst)
   allstrokes = np.concatenate(lst)
   mean = np.mean(allstrokes, 0)
   std = np.std(allstrokes, 0) 
