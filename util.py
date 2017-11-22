@@ -43,7 +43,7 @@ def add_boolean_argument(parser, name, default=False):
   group.add_argument('--no' + name, dest=name, action='store_false')
 
 def normalizeData(lst, savedir, name, varnames, normalize=True):
-  print(lst)
+  #print(lst)
   allstrokes = np.concatenate(lst)
   mean = np.mean(allstrokes, 0)
   std = np.std(allstrokes, 0) 
@@ -122,7 +122,7 @@ class TFBase(object):
       data_file = "data/training_" + self.args.usetrainingof + ".cpkl"
     else:
       data_file = "data/training_" + self.args.save_dir + ".cpkl"
-    #print(data_file)
+  print(data_file)
 
     if not (os.path.exists(data_file)) or self.args.reprocess:
       print "creating training data cpkl file from raw source"
