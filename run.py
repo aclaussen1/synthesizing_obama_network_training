@@ -47,8 +47,10 @@ class Speech(TFBase):
       self.args.input = self.args.input2
 
     if len(self.args.input):
+      print('test')
       self.test()
     else:
+      print('train')
       self.train()
 
   def createInputFeature(self, audio, audiodiff, timestamps, startframe, nframe):
