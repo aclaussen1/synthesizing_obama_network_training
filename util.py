@@ -122,7 +122,7 @@ class TFBase(object):
       data_file = "data/training_" + self.args.usetrainingof + ".cpkl"
     else:
       data_file = "data/training_" + self.args.save_dir + ".cpkl"
-    print(data_file)
+    #print(data_file)
 
     if not (os.path.exists(data_file)) or self.args.reprocess:
       print "creating training data cpkl file from raw source"
